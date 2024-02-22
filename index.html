@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Charlie Lab Doge Game">
+        <meta name="author" content="Hayden Duran">
+        <title>Echo Lab Game Page</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/styles.css" >
+    </head>
+    <body class="bg-light">
+        <!-- Page content-->
+        <div class="container-fluid bg-light">
+            <div class="row">
+                <div class="col bg-primary text-center">  
+                    <h3>Hayden's Ever Expanding Gaming Library</h3>
+                </div>
+            </div>
+            <div class="row border-bottom">
+                <div class="col p-2 bg-secondary text-center text-light">
+                    <h2>By: Hayden Duran</h2>
+                    <a href="https://github.com/MichaelHaydenDuran/echo-liber-tea" target="_blank" class="btn btn-secondary"><i class="bi bi-github me-2"></i>Github Repository</a>
+                </div>
+            </div>
+            <!-- Verical Pill Menu-->
+            <div class="row"> <!--d-flex align-items-start-->
+                <div class="col-3 pt-4" style="min-height: 600px">
+                    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link active" id="pill-none" data-bs-toggle="pill" data-bs-target="#pane-none" type="button" role="tab" aria-controls="pane-none" aria-selected="true">No Game</button>
+                        <button class="nav-link" id="pill-llama" data-bs-toggle="pill" data-bs-target="#pane-llama" type="button" role="tab" aria-controls="pane-llama" aria-selected="false">Llama Game</button>
+                        <button class="nav-link" id="pill-doge" data-bs-toggle="pill" data-bs-target="#pane-doge" type="button" role="tab" aria-controls="pane-doge" aria-selected="false">Doge Game</button>
+                    </div>
+                </div>
+                <div class="col-9 pt-4">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active text-center" id="pane-none" role="tabpanel" aria-labelledby="pill-none">
+                            <p>Select a game from the menu on the left</p>
+                        </div>
+                        <div class="tab-pane fade" id="pane-llama" role="tabpanel" aria-labelledby="pill-llama">
+                            <!-- Llama Game-->
+                            <div class="row p-4">
+                                <div class="col text-center">
+                                    <h3>Figure Out What Llama you are today!</h3>
+                                </div>
+                            </div>
+                            <div class="row mt-2 ">
+                                <div class="col text-center">
+                                    <h1>Instructions:</h1>
+                                    <p class="lead">Enter your name and birth month below!</p>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-6 mx-auto">
+                                    Name:
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 mx-auto text-center">
+                                    <input type="text" class="form-control" id="name-input" placeholder="Name Here">
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-6 mx-auto">
+                                    Birth Month:
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 mx-auto text-center">
+                                    <select id="month-select" class="form-select" aria-label="Default select example">
+                                        <option selected value="">Select</option>
+                                        <option value="January">January</option>
+                                        <option value="February">February</option>
+                                        <option value="March">March</option>
+                                        <option value="April">April</option>
+                                        <option value="May">May</option>
+                                        <option value="June">June</option>
+                                        <option value="July">July</option>
+                                        <option value="August">August</option>
+                                        <option value="September">September</option>
+                                        <option value="October">October</option>
+                                        <option value="November">November</option>
+                                        <option value="December">December</option>
+                                    </select>
+                                </div>
+                            </div> 
+                            <div class="row mt-2">
+                                <div class="col-6 mx-auto">
+                                    <button id="submit-button" type="button" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                            <div class="row mt-2" id="result">
+                                <div class="col-6 mx-auto">
+                                    <div class="card mb-3 shadow">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                            <img id="llama-image" src="default.png" class="img-fluid rounded-start w-100" alt="Llama Image">
+                                            </div>
+                                            <div class="col-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title m-0 p-0" id="name-header">Default</h5>
+                                                <div>You have<span id="letterCount" class="p-1"></span>letters in your name</div>
+                                                <div>You have<span id="vowelCount" class="p-1"></span>vowels in your name</div>
+                                                <div>Your first name is<span id="firstName" class="p-1"></span>, how nice!</div>
+                                                <div id="lastNameContainer">Your last name is<span id="lastName" class="p-1"></span>, very nice!</div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pane-doge" role="tabpanel" aria-labelledby="pill-doge">
+                            <!-- Doge Game-->
+                            <div class="row">
+                                <div class="col-6 vh-100 text-center p-3">
+                                    <h3 class="mt-4">Drag Da Doge Into Da Whole</h3>
+                                    <h5 class="text-center mt-2">(Click doge to drag)</h5>
+                                    <img id="doge" class="rounded mt-4" src="images/doge.jpg" style="width:250px" alt="Sad Doge Pic"> 
+                                    <h4 class="text-center mt-4">By: Hayden Duran</h4>              
+                                </div>
+                                <div id="hole" class="col-6 vh-100 bg-dark text-center p-3">
+                                    <h3 class="text-white mt-4">Da Whole</h3>
+                                    <h5 class="text-white text-center mt-2">(Drop doge here)</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" tabindex="-1" id="dogeModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-center">
+                    <div class="modal-body text-center">Why would you drop a doge in a whole?</div>
+                    <div class="modal-body text-center">
+                        <img src="images/sad-doge.jpg" class="w-100" alt="sad doge">
+                    </div>
+                    <div class="modal-body text-center">Wow! What's wrong with you!?!?!</div>
+                </div>
+            </div>
+        </div>  
+        <footer class="mt-4">
+            <div class="bg-secondary text-center text-light p-2">
+                <h2 class="mb-0 pb-0"><i class="bi bi-c-circle"></i> Copyright: Duran Duran Programin'</h2>
+                <a class="btn btn-sm btn-dark" href="https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fgithub.com%2FMichaelHaydenDuran%2Fecho-liber-tea" target="_blank"><i class="bi bi-code-slash me-2"></i>My HTML Validator</a>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+        <script src="scripts/scripts.js"></script>
+    </body>
+</html>
